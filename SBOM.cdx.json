@@ -1,0 +1,105 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:7e5b5c1c-46ef-4468-b342-25c22a57656a",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-25T22:48:14Z",
+    "tools": [
+      {
+        "vendor": "Owlsec LLC",
+        "name": "go-buildinfo-audit",
+        "version": "1.0"
+      }
+    ],
+    "supplier": {
+      "name": "Owlsec LLC",
+      "url": [
+        "https://owlsec.org"
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "OCaps",
+      "bom-ref": "owlsec-tool-OCaps",
+      "supplier": {
+        "name": "Owlsec LLC",
+        "url": [
+          "https://owlsec.org"
+        ]
+      },
+      "licenses": [
+        {
+          "license": {
+            "name": "Proprietary - (c) 2026 Owlsec LLC. All rights reserved."
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "40bdfa64ef7b6fba5cbc3fb34e46fb4c4766916ae8de3f70d66cdcecb45458c6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "owlsec:packer",
+          "value": "Go"
+        },
+        {
+          "name": "owlsec:go-version",
+          "value": "go1.27.2"
+        },
+        {
+          "name": "owlsec:cgo-enabled",
+          "value": "1"
+        },
+        {
+          "name": "owlsec:linkage",
+          "value": "static"
+        },
+        {
+          "name": "owlsec:binary-size",
+          "value": "3575968"
+        },
+        {
+          "name": "owlsec:source-available",
+          "value": "false"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "Go runtime and standard library",
+      "version": "1.27.2",
+      "bom-ref": "pkg:golang/stdlib@1.27.2",
+      "purl": "pkg:golang/stdlib@1.27.2",
+      "scope": "required",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "copyright": "Copyright 2009 The Go Authors.",
+      "description": "Go runtime and standard library, compiled into the executable by the Go toolchain",
+      "externalReferences": [
+        {
+          "type": "license",
+          "url": "https://github.com/golang/go/blob/go1.27.2/LICENSE"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "owlsec-tool-OCaps",
+      "dependsOn": [
+        "pkg:golang/stdlib@1.27.2"
+      ]
+    }
+  ]
+}
